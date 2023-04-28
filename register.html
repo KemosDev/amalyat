@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Mohamed Abd Al-Karim Riad Othman">
+    <meta name="copyright" content="KemosDev">
+    <meta name="description" content="صفحة التسجيل في منصة عمليات">
+    <meta name="robots" content="index, follow">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/phone.css" media="(max-width: 480px)">
+    <title>التسجيل في منصة عمليات</title>
+</head>
+<body>
+    <main class="reg">
+        <section>
+            <h1 class="h1">سجل الدخول للمنصة</h1>
+            <select title="choose" name="النوع" id="choose" class="choose" onchange="show(this.value)">
+                <option value="0">&UnderBar;&UnderBar;&UnderBar;</option>
+                <option value="1">فرد</option>
+                <option value="2">مؤسسة</option>
+            </select>
+            <form class="ind" id="ind">
+                <input type="text" name="اسم الفرد" id="ind-name" placeholder="أدخل اسمك" required>
+                <input type="text" name="العنوان" id="ind-add" placeholder="أدخل عنوانك" required>
+                <input type="phone" name="الجوال" id="phone" placeholder="أدخل رقم جوال للتواصل" required>
+                <select title="job" name="الوظيفة" id="job">
+                    <option>فرد أمن</option>
+                    <option>مشرف</option>
+                    <option>مراقب كاميرات</option>
+                    <option>مدير مشروع</option>
+                </select>
+                <input type="submit" value="إرسال">
+            </form>
+            <form class="comp" id="comp">
+                <input type="text" name="اسم الشركة" id="comp-name" placeholder="اسم الشركة" required>
+                <input type="text" name="العنوان" id="comp-add" placeholder="أدخل عنوان الشركة" required>
+                <input type="email" name="البريد" id="mail2" placeholder="أدخل البريد الإلكتروني" required>
+                <input type="url" name="الموقع" id="url" placeholder="أدخل موقع ويب للشركة إن وجد">
+                <input type="submit" value="إرسال">
+            </form>
+        </section>
+    </main>
+    <script src="./js/anime.min.js"></script>
+    <script src="./js/reg.js"></script>
+</body>
+</html>

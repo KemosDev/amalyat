@@ -1,0 +1,596 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+:root{
+    font-size: 16px;
+    --color1: #02686f;
+    --color2: #e29a15;
+    --color3: #40d3dc;
+    --color4: #3F51B5;
+    --color5: #2d3f47;
+    --color6: #1c1cc0;
+}
+.h1{
+    width: 100%;
+    height: 10%;
+    font-size: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--color1);
+}
+body{
+    background: radial-gradient(#EAEAEA, #F2F2F2, #bebdbd, #75746b);
+    background-repeat: no-repeat;
+}
+/* start header */
+header{
+    width: 100vw;
+    height: 15vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header .logo{
+    width: 11%;
+    height: 15vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header .logo img{
+    width: 100%;
+    height: max-content;
+}
+header .list{
+    width: 75%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header .list i.fa-bars-staggered{
+    display: none;
+}
+header .list ul{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+    transition: opacity .5s linear;
+    z-index: 1;
+}
+header .list ul li a{
+    display: block;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--color1);
+    text-transform: capitalize;
+    text-decoration: none;
+    transition: color .5s linear;
+}
+header .list ul li a:hover{
+    color: var(--color2);
+}
+/* end header */
+
+/* start home */
+.home{
+    width: 100vw;
+    height: 75vh;
+}
+.home section{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+.home section .slider{
+    width: 60%;
+    height: 90%;
+    margin: 0 2vw;
+    overflow: hidden;
+    position: relative;
+    border-radius: 10%;
+}
+.home section .slider .slides{
+    width: 400%;
+    height: 100%;
+    display: flex;
+}
+input[type='radio']{
+    display: none;
+}
+.home .slider .slides .slide{
+    width: 25%;
+    height: 100%;
+    transition: 2s;
+    position: relative;
+}
+.home .slider .slide img{
+    width: 100%;
+    height: max-content;
+}
+.home .slider .slide:first-of-type::before{
+    content: 'أمن المكاتب';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000000a9;
+    font-family: sans-serif;
+    font-size: 5rem;
+    color: var(--color2);
+    text-transform: capitalize;
+}
+.home .slider .slide:nth-of-type(2)::before{
+    content: 'أمن البنوك';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #02686f77;
+    font-family: sans-serif;
+    font-size: 5rem;
+    color: var(--color2);
+    text-transform: capitalize;
+}
+.home .slider .slide:nth-of-type(3)::before{
+    content: 'أمن الحفلات';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000000a9;
+    font-family: sans-serif;
+    font-size: 5rem;
+    color: var(--color2);
+    text-transform: capitalize;
+}
+.home .slider .slide:last-of-type::before{
+    content: 'حارس شخصي';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #02686f77;
+    font-family: sans-serif;
+    font-size: 5rem;
+    color: var(--color2);
+    text-transform: capitalize;
+}
+#radio1:checked  ~ .first{
+    margin-left: 0;
+}
+#radio2:checked  ~ .first{
+    margin-left: -25%;
+}
+#radio3:checked  ~ .first{
+    margin-left: -50%;
+}
+#radio4:checked  ~ .first{
+    margin-left: -75%;
+}
+.home section .info{
+    width: 35%;
+    height: 90%;
+}
+.home section .info h2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2%;
+    color: var(--color4);
+    font-size: 2.3rem;
+}
+.home section .info p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--color5);
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+/* end home */
+
+/* start about */
+.about{
+    width: 100vw;
+    height: 75vh;
+    padding: 2%;
+}
+.about section{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.about section .history{
+    width: 25%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.about section .history h2{
+    height: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.3rem;
+    color: var(--color4);
+}
+.about section .history .works{
+    width: 100%;
+    height: 85%;  
+}
+.about section .history .works h3{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.9rem;
+    margin-bottom: 1%;
+    color: var(--color6);
+}
+.about section .history .works ul li{
+    list-style: none;
+    margin-right: 4%;
+    line-height: 1.2;
+    font-size: 1.3rem;
+    color: var(--color5);
+    font-weight: 700;
+}
+.about section .cards{
+    width: 70%;
+    height: max-content;
+    margin: 0 auto;
+    padding: 1%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.about section .cards h3{
+    width: 100%;
+    height: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.9rem;
+    color: var(--color4);
+    margin-bottom: 2vh;
+}
+.about section .cards .card{
+    width: 23%;
+    height: max-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 3%;
+    padding: 1%;
+    border-radius: 10%;
+    box-shadow: 0 0 10px 2px var(--color3);
+    background-color: white;
+}
+.about section .cards .card .image{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+.about section .cards .card .image img{
+    width: 100%;
+    height: max-content;
+    border-radius: 50%;
+}
+.about section .cards .card h4{
+    font-size: 1.4rem;
+    font-weight: 800;
+    font-family: sans-serif;
+    color: var(--color4);
+}
+.about section .cards .card p{
+    font-size: 1.2rem;
+    font-family: sans-serif;
+    font-weight: 700;
+    color: var(--color6);
+}
+/* end about */
+
+/* start contact */
+.cont{
+    width: 100vw;
+    height: 75vh;
+}
+.cont section{
+    width: 100%;
+    height: 100%;
+}
+.cont section form{
+    width: 75%;
+    height: 85%;
+    margin: 0 auto;
+    padding: 1%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.cont section form input,textarea{
+    width: 40%;
+    margin-bottom: 1vh;
+    padding: 1%;
+    outline: none;
+    border: 3px solid var(--color5);
+    border-radius: 1rem;
+    caret-color: var(--color2);
+    font-size: 1.2rem;
+    font-weight: 900;
+    color: var(--color1);
+}
+.cont section form h3{
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--color1);
+}
+.cont section form input[type='submit']{
+    width: 25%;
+    cursor: pointer;
+    font-size: 1.3rem;
+    border-radius: 2rem;
+    transition: .5s linear;
+    position: relative;
+}
+.cont section form input[type='submit']:hover{
+    background-color: var(--color5);
+    color: var(--color2);
+}
+.cont section .social{
+    width: 40%;
+    height: 10%;
+    margin: 2vh auto 0;
+    padding: 1%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.cont section .social .fa-facebook{
+    color: #175acf;
+}
+.cont section .social .fa-square-twitter{
+    color: #3a7cee;
+}
+.cont section .social .fa-linkedin{
+    color: #1346a0;
+}
+/* end contact */
+/* start footer */
+footer{
+    width: 98vw;
+    height: 8vh;
+    margin: 2vh auto 0;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    color: var(--color6);
+    font-size: 1.3rem;
+    font-weight: 800;
+}
+footer p a{
+    text-decoration: none;
+    color: var(--color1);
+}
+/* end footer */
+
+/* start login */
+.login{
+    width: 100vw;
+    height: 100vh;
+}
+.login form{
+    width: 75%;
+    height: 85%;
+    margin: 0 auto;
+    padding: 1%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.login form input{
+    width: 40%;
+    margin-bottom: 1vh;
+    padding: 1%;
+    outline: none;
+    border: 3px solid var(--color5);
+    border-radius: 1rem;
+    caret-color: var(--color2);
+    font-size: 1.2rem;
+    font-weight: 900;
+    color: var(--color1);
+}
+.login form input[type='submit']{
+    width: 25%;
+    cursor: pointer;
+}
+/* end login */
+
+/* start register */
+.reg{
+    width: 100vw;
+    height: 100vh;
+}
+.reg section{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.reg section .choose{
+    width: 15%;
+    padding: 0 1%;
+    outline: none;
+    border: 3px solid var(--color5);
+    border-radius: 1rem;
+    caret-color: var(--color2);
+    font-size: 1.2rem;
+    font-weight: 900;
+    color: var(--color1);
+}
+.reg section .ind, .comp{
+    width: 75%;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.reg section .ind input, .comp input{
+    width: 40%;
+    padding: 1%;
+    outline: none;
+    border: 3px solid var(--color5);
+    border-radius: 1rem;
+    caret-color: var(--color2);
+    font-size: 1.2rem;
+    font-weight: 900;
+    color: var(--color1);
+}
+.reg section .ind select{
+    width: 15%;
+    padding: 0 1%;
+    outline: none;
+    border: 3px solid var(--color5);
+    border-radius: 1rem;
+    caret-color: var(--color2);
+    font-size: 1.2rem;
+    font-weight: 900;
+    color: var(--color1);
+}
+.reg section .ind input[type='submit'], .comp input[type='submit']{
+    width: 25%;
+    cursor: pointer;
+}
+/* end register */
+
+@media (min-width: 481px) and (max-width: 768px)  {
+    :root{
+        font-size: 12px;
+    }
+    header{
+        height: 15vh;
+    }
+    header .logo{
+        width: 16%;
+    }
+    header .list i.fa-bars-staggered{
+        display: block;
+    }
+    header .list ul{
+        width: 100vw;
+        height: 30vh;
+        flex-direction: column;
+        position: absolute;
+        top: 15vh;
+        left: 0;
+        background-color: #aaa;
+    }
+    header .list ul.show{
+        display: none;
+    }
+    header .list ul::before{
+        content: '';
+        position: absolute;
+        top: -4.5vh;
+        left: 60%;
+        border: 1rem solid;
+        border-color: transparent transparent #aaa transparent;
+    }
+    header .list ul li{
+        width: 98vw;
+        margin-right: 2vw;
+    }
+    header .list ul li:not(:last-of-type){
+        border-bottom: 3px solid var(--color5);
+    }
+    .home section .slider{
+        height: max-content;
+    }
+    .about{
+        height: max-content;
+    }
+    .about section .history{
+        width: 70%;
+        height: max-content;
+        margin: 0 auto;
+    
+    }
+    .about section .cards{
+        height: max-content;
+    }
+    .about section .cards .card{
+        width: 40%;
+    }
+    .cont section form input,textarea{
+        width: 60%;
+    }
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+    :root{
+        font-size: 15px;
+    }
+    .cont section form input,textarea{
+        width: 50%;
+    }
+}
+@media (min-width: 1025px) and (max-width: 1200px) {
+    :root{
+        font-size: 17px;
+    }
+}
+@media (min-width: 1201px) and (max-width: 1799px){
+    :root{
+        font-size: 18px;
+    }
+}
+@media (min-width: 1800px) and (max-width: 2000px) {
+    :root{
+        font-size: 24px;
+    }
+}
+@media (min-width: 2001px) {
+    :root{
+        font-size: 29px;
+    }
+}
