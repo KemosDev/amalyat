@@ -115,7 +115,7 @@ input[type='radio']{
 }
 .home .slider .slide img{
     width: 100%;
-    height: max-content;
+    height: 100%;
 }
 .home .slider .slide:first-of-type::before{
     content: 'أمن المكاتب';
