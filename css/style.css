@@ -226,7 +226,7 @@ input[type='radio']{
 /* start about */
 .about{
     width: 100vw;
-    height: 75vh;
+    height: 73vh;
     padding: 2%;
 }
 .about section{
@@ -333,7 +333,7 @@ input[type='radio']{
 /* start contact */
 .cont{
     width: 100vw;
-    height: 75vh;
+    height: 73vh;
 }
 .cont section{
     width: 100%;
